@@ -1,32 +1,32 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
+    <ion-tab-button tab="home" routerLink="/tabs/home">
+      <ion-icon name="home"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button tab="artists-list" routerLink="artists-list">
       <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Home</ion-label>
+      Artist List
     </ion-tab-button>
-    <ion-tab-button tab="artists-list" href="artists-list">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Artists list</ion-label>
+    <ion-tab-button tab="featured-artists" routerLink="featured-artists">
+      <ion-icon  name="ellipse"></ion-icon>
+      Featured artists
     </ion-tab-button>
-    <ion-tab-button tab="featured-artists" href="featured-artists">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Featured artists</ion-label>
+    <ion-tab-button tab="modify-artists" routerLink="modify-artists">
+      <ion-icon name="ellipse"></ion-icon>
+      Modify artists
     </ion-tab-button>
-    <ion-tab-button tab="modify-artists" href="modify-artists">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Modify artists</ion-label>
+    <ion-tab-button tab="new-artist" routerLink="new-artist">
+      <ion-icon name="ellipse"></ion-icon>
+      New artist
     </ion-tab-button>
-    <ion-tab-button tab="new-artist" href="new-artist">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>New artist</ion-label>
+    <ion-tab-button tab="search-artists" routerLink="search-artists/">
+      <ion-icon name="ellipse"></ion-icon>
+      Search artists
     </ion-tab-button>
-    <ion-tab-button tab="search-artists" href="search-artists/">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Search artists</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="privacy-policy" href="privacy-policy">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Privacy policy</ion-label>
+    <ion-tab-button tab="privacy-policy" routerLink="privacy-policy">
+      <ion-icon name="ellipse"></ion-icon>
+      Privacy policy
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

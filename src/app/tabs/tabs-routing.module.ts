@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'artists-list',
-        loadChildren: () => import('../pages//artists-list/artists-list.module').then(m => m.ArtistsListPageModule)
+        loadChildren: () => import('../pages/artists-list/artists-list.module').then(m => m.ArtistsListPageModule)
       },
       {
         path: 'featured-artists',
@@ -49,14 +49,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '../pages/home',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '../pages/home',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
