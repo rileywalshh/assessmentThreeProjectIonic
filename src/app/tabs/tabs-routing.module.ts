@@ -12,6 +12,30 @@ const routes: Routes = [
         loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
       },
       {
+        path: 'artists-list',
+        loadChildren: () => import('../pages//artists-list/artists-list.module').then(m => m.ArtistsListPageModule)
+      },
+      {
+        path: 'featured-artists',
+        loadChildren: () => import('../pages/featured-artists/featured-artists.module').then(m => m.FeaturedArtistsPageModule)
+      },
+      {
+        path: 'modify-artists',
+        loadChildren: () => import('../pages/modify-artists/modify-artists.module').then(m => m.ModifyArtistsPageModule)
+      },
+      {
+        path: 'new-artist',
+        loadChildren: () => import('../pages/new-artist/new-artist.module').then(m => m.NewArtistPageModule)
+      },
+      {
+        path: 'search-artists',
+        loadChildren: () => import('../pages/search-artists/search-artists.module').then(m => m.SearchArtistsPageModule)
+      },
+      {
+        path: 'privacy-policy',
+        loadChildren: () => import('../pages/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyPageModule)
+      },
+      {
         path: 'tab1',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
@@ -25,14 +49,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '../pages/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '../pages/home',
     pathMatch: 'full'
   }
 ];
