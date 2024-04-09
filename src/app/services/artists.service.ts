@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Artist } from '../models/Artist';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable({
   //Service is provided at all levels of app.
@@ -18,7 +19,12 @@ export class ArtistsService {
 
 
   //function to retrieve data from target api. returns an observable.
-  getArtists(): Observable<any[]> {
-    return this.http.get<any[]>(this.artistsUrl);
+  getArtists(): Observable<Artist[]> {
+    return this.http.get<Artist[]>(this.artistsUrl);
+  }
+
+  //function to retrieve only featured artists from api.
+  getFeaturedArtists(): Observable<Artist[]> {
+    return this.http.get<Artist[]>(this.artistsUrl).pipe(map(artists => artists.filter(artist => artist.is_featured_artists === 1)));
   }
 }

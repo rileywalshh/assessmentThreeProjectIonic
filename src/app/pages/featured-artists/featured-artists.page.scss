@@ -1,0 +1,14 @@
+//Styling to make the artists table easier to read.
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+th, td {
+    border: 1px solid lightgray;
+    text-align: left;
+    padding: 10px;
+}
+th {
+    background-color: rgb(155, 152, 152);
+}
