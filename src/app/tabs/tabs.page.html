@@ -1,29 +1,37 @@
+<!--Buttons for navigating the app-->
 <ion-tabs>
   <ion-tab-bar slot="bottom">
+    <!--This button is for the Home tab, it will also be the default tab for the app-->
     <ion-tab-button tab="home" routerLink="/tabs/home">
       <ion-icon name="home"></ion-icon>
       Home
     </ion-tab-button>
+    <!--This button is for the artists-list tab, this is to view existing artists-->
     <ion-tab-button tab="artists-list" routerLink="artists-list">
       <ion-icon name="reader-outline"></ion-icon>
       Artist List
     </ion-tab-button>
+    <!--This button is to navigate to the featured-artists tab, which is to view artists that have been searched-->
     <ion-tab-button tab="featured-artists" routerLink="featured-artists">
       <ion-icon  name="star-outline"></ion-icon>
       Featured artists
     </ion-tab-button>
+    <!--This button is to navigate to the modify-artists tab, which will be used to change any entries-->
     <ion-tab-button tab="modify-artists" routerLink="modify-artists">
       <ion-icon name="build-outline"></ion-icon>
       Modify artists
     </ion-tab-button>
+    <!--This button is to navigate to the new-artists tab which will contain the form to submit new data entries-->
     <ion-tab-button tab="new-artist" routerLink="new-artist">
       <ion-icon name="person-add-outline"></ion-icon>
       New artist
     </ion-tab-button>
+    <!--This button is to navigate to the search tab, which is used to find specific artists-->
     <ion-tab-button tab="search-artists" routerLink="search-artists/">
       <ion-icon name="search"></ion-icon>
       Search artists
     </ion-tab-button>
+    <!--This button is to navigate to the apps privacy policy-->
     <ion-tab-button tab="privacy-policy" routerLink="privacy-policy">
       <ion-icon name="lock-closed-outline"></ion-icon>
       Privacy policy

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ArtistsService } from 'src/app/services/artists.service';
 
 @Component({
   selector: 'app-new-artist',
@@ -9,26 +10,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NewArtistPage implements OnInit {
   newArtistForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private artistsService: ArtistsService) { }
 
   ngOnInit() {
+    this.initForm();
+  }
+
+  initForm() {
     this.newArtistForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      DOB: [null, Validators.required],
-      gender: ['', Validators.required],
-      artWorkType: ['', Validators.required],
-      contactInfo: ['', Validators.required],
-      exhibitionDate: [null, Validators.required],
-      specialNotes: [''],
-      isArtistFeatured: [false]
-    });
+      
+    })
   }
 
 
   onSubmit() {
-    if (this.newArtistForm.valid){
-      const formValue = {...this.newArtistForm.value};
-      console.log(this.newArtistForm.value);
-    }
+    
   }
 }
