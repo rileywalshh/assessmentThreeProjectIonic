@@ -1,5 +1,6 @@
+//interface for Artist
 export interface Artist {
-    artists_id: number;
+    artist_id: number;
     name: string;
     dob: Date;
     gender: 'Female' | 'Male' | 'Unspecified';

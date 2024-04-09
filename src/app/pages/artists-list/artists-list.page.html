@@ -10,6 +10,7 @@
       <ion-title size="large">artists-list</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!--Table for artists data to be displayed-->
   <table>
     <tr>
       <th>ID:</th>
@@ -23,7 +24,7 @@
       <th>notes:</th>
     </tr>
     <tr *ngFor="let artist of artists">
-    <td>{{artist.artists_id}}</td>
+    <td>{{artist.artist_id}}</td>
     <td>{{artist.name}}</td>
     <td>{{artist.dob | date:'mediumDate'}}</td>
     <td>{{artist.gender}}</td>
