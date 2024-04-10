@@ -18,7 +18,7 @@
   </ion-item>
 <ion-item>
   <label position="floating">Date of birth:</label>
-  <ion-datetime formControlName="DOB" displayFormat="YYYY-MM-DD"></ion-datetime>
+  <ion-datetime formControlName="dob" displayFormat="YYYY-MM-DD"></ion-datetime>
 </ion-item>
 <ion-item>
   <label>Gender:</label>
@@ -30,7 +30,7 @@
 </ion-item>
 <ion-item>
   <label>Artwork Type:</label>
-  <ion-select formControlName="artWorkType">
+  <ion-select formControlName="artwork_type">
     <ion-select-option value="painting">painting</ion-select-option>
     <ion-select-option value="sculpture">sculpture</ion-select-option>
     <ion-select-option value="photograph">photograph</ion-select-option>
@@ -40,15 +40,16 @@
 </ion-item>
 <ion-item>
   <label position="floating">Contact info:</label>
-  <ion-input formControlName="contactInfo" type="text"></ion-input>
+  <ion-input formControlName="contact_info" type="text"></ion-input>
 </ion-item>
 <ion-item>
   <label position="floating">Exhibition date:</label>
-  <ion-input formControlName="exhibitionDate" displayFormat="YYYY-MM-DD"></ion-input>
+  <ion-datetime formControlName="exhibition_date" displayFormat="YYYY-MM-DD"></ion-datetime>
 </ion-item>
 <ion-item>
   <label position="stacked">Special notes:</label>
   <ion-textarea formControlName="specialNotes"></ion-textarea>
 </ion-item>
+<ion-button type="submit" expand="block" [disabled]="newArtistForm.invalid">Submit Artist</ion-button>
 </form>
 </ion-content>
