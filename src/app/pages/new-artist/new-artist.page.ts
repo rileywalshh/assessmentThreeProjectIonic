@@ -23,6 +23,7 @@ export class NewArtistPage implements OnInit {
       artwork_type: ['', Validators.required],
       contact_info: ['', Validators.required],
       exhibition_date: [new Date().toISOString(), Validators.required],
+      is_featured_artist: ['', Validators.required],
       specialNotes: ['']
     });
   }
@@ -34,13 +35,11 @@ export class NewArtistPage implements OnInit {
     if (this.newArtistForm.valid) {
       //creates a formValue object which will hold the form values.
       //uses spread operator to copy all current values.
-      const formValue = {
-        ...this.newArtistForm.value,
+      const formValue = { ...this.newArtistForm.value };
         //converts date values to a date object then to an ISO string, then matches to a YYYY-MM-DD format.
-        dob: new Date(this.newArtistForm.value.dob).toISOString().split('T')[0],
-        exhibition_date: new Date(this.newArtistForm.value.exhibition_date).toISOString().split('T')[0],
-        is_featured_artist: this.newArtistForm.value.isArtistFeatured ? 1 : 0
-      };
+        formValue.dob = new Date(this.newArtistForm.value.dob).toISOString().split('T')[0];
+        formValue.exhibition_date = new Date(this.newArtistForm.value.exhibition_date).toISOString().split('T')[0];
+        formValue.is_featured_artist = Number(this.newArtistForm.value.isArtistFeatured ? 1 : 0);
       //calls artistsService to create a new artists entry in the database with the stored form values.
       this.artistsService.createNewArtist(formValue).subscribe({
         next: (createNewArtist) => {

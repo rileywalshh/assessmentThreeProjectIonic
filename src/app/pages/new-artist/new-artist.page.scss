@@ -1,0 +1,42 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    ion-grid {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  
+  ion-row {
+    justify-content: center;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    width: 100%;
+  }
+  
+  ion-label {
+    text-align: left;
+  }
+  
+  ion-input, ion-datetime, ion-select, ion-textarea {
+    --padding-start: 0;
+    width: 100%;
+  }
+  
+  ion-button {
+    width: 100%;
+  }
+  

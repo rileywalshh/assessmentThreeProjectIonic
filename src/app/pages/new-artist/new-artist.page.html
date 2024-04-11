@@ -11,45 +11,54 @@
   </ion-header>
 
   <!--Form for new artists to fill out-->
-  <form [formGroup]="newArtistForm" (ngSubmit)="onSubmit()">
-  <ion-item>
-    <label position="floating">Name:</label>
-    <ion-input formControlName="name" type="text"></ion-input>
-  </ion-item>
-<ion-item>
-  <label position="floating">Date of birth:</label>
-  <ion-datetime formControlName="dob" displayFormat="YYYY-MM-DD"></ion-datetime>
-</ion-item>
-<ion-item>
-  <label>Gender:</label>
-  <ion-select formControlName="gender">
-    <ion-select-option value="Female">Female</ion-select-option>
-    <ion-select-option value="Male">Male</ion-select-option>
-    <ion-select-option value="Unspecified">Unspecified</ion-select-option>
-  </ion-select>
-</ion-item>
-<ion-item>
-  <label>Artwork Type:</label>
-  <ion-select formControlName="artwork_type">
-    <ion-select-option value="painting">painting</ion-select-option>
-    <ion-select-option value="sculpture">sculpture</ion-select-option>
-    <ion-select-option value="photograph">photograph</ion-select-option>
-    <ion-select-option value="video-art">video art</ion-select-option>
-    <ion-select-option value="digital-art">digital art</ion-select-option>
-  </ion-select>
-</ion-item>
-<ion-item>
-  <label position="floating">Contact info:</label>
-  <ion-input formControlName="contact_info" type="text"></ion-input>
-</ion-item>
-<ion-item>
-  <label position="floating">Exhibition date:</label>
-  <ion-datetime formControlName="exhibition_date" displayFormat="YYYY-MM-DD"></ion-datetime>
-</ion-item>
-<ion-item>
-  <label position="stacked">Special notes:</label>
-  <ion-textarea formControlName="specialNotes"></ion-textarea>
-</ion-item>
-<ion-button type="submit" expand="block" [disabled]="newArtistForm.invalid">Submit Artist</ion-button>
-</form>
+  <div class="form-container">
+    <form [formGroup]="newArtistForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <label position="floating">Name:</label>
+        <ion-input formControlName="name" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <label position="floating">Date of birth:</label>
+        <ion-datetime formControlName="dob" displayFormat="YYYY-MM-DD"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <label>Gender:</label>
+        <ion-select formControlName="gender">
+          <ion-select-option value="Female">Female</ion-select-option>
+          <ion-select-option value="Male">Male</ion-select-option>
+          <ion-select-option value="Unspecified">Unspecified</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <label>Artwork Type:</label>
+        <ion-select formControlName="artwork_type">
+          <ion-select-option value="painting">painting</ion-select-option>
+          <ion-select-option value="sculpture">sculpture</ion-select-option>
+          <ion-select-option value="photograph">photograph</ion-select-option>
+          <ion-select-option value="video-art">video art</ion-select-option>
+          <ion-select-option value="digital-art">digital art</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <label position="floating">Contact info:</label>
+        <ion-input formControlName="contact_info" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <label position="floating">Exhibition date:</label>
+        <ion-datetime formControlName="exhibition_date" displayFormat="YYYY-MM-DD"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <label>Featured:</label>
+        <ion-select formControlName="is_featured_artist">
+          <ion-select-option value="1">Yes</ion-select-option>
+          <ion-select-option value="0">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <label position="stacked">Special notes:</label>
+        <ion-textarea formControlName="specialNotes"></ion-textarea>
+      </ion-item>
+      <ion-button type="submit" expand="block" [disabled]="newArtistForm.invalid">Submit Artist</ion-button>
+    </form>
+  </div>
 </ion-content>
