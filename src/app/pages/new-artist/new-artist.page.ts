@@ -39,6 +39,7 @@ export class NewArtistPage implements OnInit {
         //converts date values to a date object then to an ISO string, then matches to a YYYY-MM-DD format.
         formValue.dob = new Date(this.newArtistForm.value.dob).toISOString().split('T')[0];
         formValue.exhibition_date = new Date(this.newArtistForm.value.exhibition_date).toISOString().split('T')[0];
+        //converts the value of is featured to a number.
         formValue.is_featured_artist = Number(this.newArtistForm.value.isArtistFeatured ? 1 : 0);
       //calls artistsService to create a new artists entry in the database with the stored form values.
       this.artistsService.createNewArtist(formValue).subscribe({
