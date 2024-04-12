@@ -8,5 +8,5 @@ export interface Artist {
     contact_info: string;
     exhibition_date: Date;
     specialNotes: string;
-    is_featured_artists: number;
+    is_featured_artist: number;
 }

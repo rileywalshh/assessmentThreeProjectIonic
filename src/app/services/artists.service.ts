@@ -25,7 +25,7 @@ export class ArtistsService {
 
   //function to retrieve only featured artists from api.
   getFeaturedArtists(): Observable<Artist[]> {
-    return this.http.get<Artist[]>(this.artistsUrl).pipe(map(artists => artists.filter(artist => artist.is_featured_artists === 1)));
+    return this.http.get<Artist[]>(this.artistsUrl).pipe(map(artists => artists.filter(artist => artist.is_featured_artist === 1)));
   }
 
   //method for creating/posting a new artists to the db.

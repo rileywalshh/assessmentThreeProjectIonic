@@ -22,7 +22,7 @@
       <th>Featured:</th>
       <th>notes:</th>
     </tr>
-    <tr *ngFor="let artist of featuredArtists">
+    <tr *ngFor="let artist of featured_artists">
     <td>{{artist.artist_id}}</td>
     <td>{{artist.name}}</td>
     <td>{{artist.dob | date:'mediumDate'}}</td>
@@ -30,7 +30,7 @@
     <td>{{artist.artwork_type}}</td>
     <td>{{artist.contact_info}}</td>
     <td>{{artist.exhibition_date | date:'mediumDate'}}</td>
-    <td>{{artist.is_featured_artists ? 1 : 0 }}</td>
+    <td>{{artist.is_featured_artist ? 1 : 0 }}</td>
     <td>{{artist.specialNotes}}</td>
   </tr>
   </table>
