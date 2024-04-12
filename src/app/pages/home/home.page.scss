@@ -1,3 +1,10 @@
+//added styling for image
+.image-home {
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 20px;
+}
+
 //added a footer to give the home page some style.
 ion-footer {
     border-top: 2px solid var(--ion-color-medium);
