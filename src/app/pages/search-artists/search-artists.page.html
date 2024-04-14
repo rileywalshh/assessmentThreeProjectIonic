@@ -10,4 +10,28 @@
       <ion-title size="large">search-artists</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-searchbar [(ngModel)]="searchArtistName"></ion-searchbar>
+  <ion-button shape="round" fill="outline" >Search Artist</ion-button>
+  <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Artwork Type</th>
+        <th>Contact Info</th>
+        <th>Exhibition Date</th>
+        <th>Featured Artist</th>
+      </tr>
+      <tr *ngFor="let artist of artists">
+        <td>{{ artist.artist_id }}</td>
+        <td>{{ artist.name }}</td>
+        <td>{{ artist.dob | date:'mediumDate' }}</td>
+        <td>{{ artist.gender }}</td>
+        <td>{{ artist.artwork_type }}</td>
+        <td>{{ artist.contact_info }}</td>
+        <td>{{ artist.exhibition_date | date:'mediumDate' }}</td>
+        <td>{{ artist.is_featured_artists ? '1' : '0' }}</td>
+      </tr>
+  </table>
 </ion-content>

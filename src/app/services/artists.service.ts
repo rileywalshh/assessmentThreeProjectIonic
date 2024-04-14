@@ -27,4 +27,9 @@ export class ArtistsService {
   getFeaturedArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>(this.artistsUrl).pipe(map(artists => artists.filter(artist => artist.is_featured_artists === 1)));
   }
+  
+  //function to data for an artist name
+  searchArtists(artistName: string): Observable<Artist[]> {
+    return this.http.get<Artist[]>(this.artistsUrl+artistName);
+  }
 }
