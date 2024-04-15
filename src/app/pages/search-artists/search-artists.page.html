@@ -1,13 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>search-artists</ion-title>
+    <ion-title>Search Artists</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">search-artists</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar [(ngModel)]="searchArtistId"></ion-searchbar>
+  <ion-button (click)="onSubmit()" shape="round" fill="outline">Search Artist</ion-button>
+
+  <ng-container *ngIf="artist">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Artwork Type</th>
+        <th>Contact Info</th>
+        <th>Exhibition Date</th>
+        <th>Featured Artist</th>
+      </tr>
+      <tr>
+        <td>{{ artist.artist_id }}</td>
+        <td>{{ artist.name }}</td>
+        <td>{{ artist.dob | date:'mediumDate' }}</td>
+        <td>{{ artist.gender }}</td>
+        <td>{{ artist.artwork_type }}</td>
+        <td>{{ artist.contact_info }}</td>
+        <td>{{ artist.exhibition_date | date:'mediumDate' }}</td>
+        <td>{{ artist.is_featured_artist ? 'Yes' : 'No' }}</td>
+      </tr>
+    </table>
+  </ng-container>
+  
+  <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
 </ion-content>

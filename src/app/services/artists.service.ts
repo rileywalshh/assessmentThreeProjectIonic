@@ -32,4 +32,10 @@ export class ArtistsService {
   createNewArtist(artist: Omit<Artist, 'id'>): Observable<Artist> {
     return this.http.post<Artist>(this.artistsUrl, artist);
   }
+
+  //function to data for an artist id.
+  //changed to id as is easier than searching by name.
+  searchArtistById(artist_id: string): Observable<Artist> {
+    return this.http.get<Artist>(`${this.artistsUrl}/${artist_id}`);
+  }
 }
