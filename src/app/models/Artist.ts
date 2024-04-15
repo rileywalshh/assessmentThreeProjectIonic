@@ -7,6 +7,6 @@ export interface Artist {
     artwork_type: string;
     contact_info: string;
     exhibition_date: Date;
-    specialNotes: string;
+    special_notes: string;
     is_featured_artist: number;
 }

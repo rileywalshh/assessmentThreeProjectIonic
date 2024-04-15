@@ -1,13 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>modify-artists</ion-title>
+    <ion-title>artists-list</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">modify-artists</ion-title>
+      <ion-title size="large">artists-list</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!--Table for artists data to be displayed-->
+  <table>
+    <tr>
+      <th>ID:</th>
+      <th>Name:</th>
+      <th>Dob:</th>
+      <th>Gender:</th>
+      <th>Artwork:</th>
+      <th>Contact:</th>
+      <th>Exhibition date:</th>
+      <th>Featured:</th>
+      <th>notes:</th>
+    </tr>
+    <tr *ngFor="let artist of artists">
+    <td>{{artist.artist_id}}</td>
+    <td>{{artist.name}}</td>
+    <td>{{artist.dob | date:'mediumDate'}}</td>
+    <td>{{artist.gender}}</td>
+    <td>{{artist.artwork_type}}</td>
+    <td>{{artist.contact_info}}</td>
+    <td>{{artist.exhibition_date | date:'mediumDate'}}</td>
+    <td>{{artist.is_featured_artist ? 1 : 0 }}</td>
+    <td>{{artist.special_notes}}</td>
+  </tr>
+  </table>
 </ion-content>
