@@ -38,4 +38,14 @@ export class ArtistsService {
   searchArtistById(artist_id: string): Observable<Artist> {
     return this.http.get<Artist>(`${this.artistsUrl}/${artist_id}`);
   }
+
+  //function to delete an entry from the db.
+  deleteArtist(name: string): Observable<any> {
+    return this.http.delete(`${this.artistsUrl}/${name}`);
+  }
+
+  //function to edit and update an entry from the db.
+  // updateArtist(artist: Artist): Observable<Artist> {
+  //   return this.http.put<Artist>(`${this.artistsUrl}/${artist.artist_id}`, artist);
+  // }
 }

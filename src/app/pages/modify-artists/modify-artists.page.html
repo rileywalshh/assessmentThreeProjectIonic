@@ -35,8 +35,9 @@
     <td>{{artist.exhibition_date | date:'mediumDate'}}</td>
     <td>{{artist.is_featured_artist ? 1 : 0 }}</td>
     <td>{{artist.special_notes}}</td>
-    <td><ion-button style="background-color: #0084ff; border-radius: 10px;" (click)="editArtist(artist)">Edit</ion-button></td>
-    <td><ion-button style="background-color: #0084ff; border-radius: 10px;" (click)="deleteArtist(artist.artist_id)">Delete</ion-button></td>
+    <!--buttons to modify entries.-->
+    <td><ion-button style="background-color: #0084ff; border-radius: 10px;">Edit</ion-button></td>
+    <td><ion-button style="background-color: #0084ff; border-radius: 10px;" (click)="confirmDeleteAlert(artist.name)">Delete</ion-button></td>
   </tr>
   </table>
 </ion-content>

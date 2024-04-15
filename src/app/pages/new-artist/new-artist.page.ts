@@ -49,6 +49,7 @@ export class NewArtistPage implements OnInit {
           this.newArtistForm.reset();
         },
         error: (error) => {
+          //Console logging for debug purposes.
           console.error('could not send artist', error);
         }
       });
