@@ -28,4 +28,17 @@ export class ModifyArtistsPage implements OnInit {
       }));
     }
   )};
+
+  editArtist(artist: Artist) {
+    // Navigate to edit page or open modal with artist data
+  }
+  
+  deleteArtist(artistId: number) {
+    // Optionally show confirmation dialogue before deletion
+    this.showDeleteConfirm(artistId);
+  }
+  
+  showDeleteConfirm(artistId: number) {
+    // Logic to show confirmation dialogue and delete artist if confirmed
+  }
 }

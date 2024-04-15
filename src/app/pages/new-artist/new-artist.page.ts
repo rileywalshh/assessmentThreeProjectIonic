@@ -24,7 +24,7 @@ export class NewArtistPage implements OnInit {
       contact_info: ['', Validators.required],
       exhibition_date: [new Date().toISOString(), Validators.required],
       is_featured_artist: ['', Validators.required],
-      specialNotes: ['']
+      special_notes: ['']
     });
   }
 

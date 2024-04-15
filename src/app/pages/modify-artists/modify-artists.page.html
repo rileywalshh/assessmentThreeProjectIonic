@@ -22,6 +22,8 @@
       <th>Exhibition date:</th>
       <th>Featured:</th>
       <th>notes:</th>
+      <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <tr *ngFor="let artist of artists">
     <td>{{artist.artist_id}}</td>
@@ -33,6 +35,8 @@
     <td>{{artist.exhibition_date | date:'mediumDate'}}</td>
     <td>{{artist.is_featured_artist ? 1 : 0 }}</td>
     <td>{{artist.special_notes}}</td>
+    <td><ion-button style="background-color: #0084ff; border-radius: 10px;" (click)="editArtist(artist)">Edit</ion-button></td>
+    <td><ion-button style="background-color: #0084ff; border-radius: 10px;" (click)="deleteArtist(artist.artist_id)">Delete</ion-button></td>
   </tr>
   </table>
 </ion-content>
